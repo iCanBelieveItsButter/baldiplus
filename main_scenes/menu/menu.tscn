@@ -1,0 +1,129 @@
+[gd_scene load_steps=8 format=3 uid="uid://bh0pphh2mvi7m"]
+
+[ext_resource type="Script" uid="uid://dhtx7nabv07h6" path="res://main_scenes/menu/menu.gd" id="1_kxjik"]
+[ext_resource type="Texture2D" uid="uid://b4ka5ilgsqxi" path="res://plusAssets/Texture2D/TempMenu_Low.png" id="2_0c8yv"]
+[ext_resource type="Texture2D" uid="uid://bnjdqrm8bgmng" path="res://plusAssets/Texture2D/About_Lit.png" id="3_4nxdj"]
+[ext_resource type="Texture2D" uid="uid://dynfqr0atjy7u" path="res://plusAssets/Texture2D/Options_Lit.png" id="4_7xq40"]
+[ext_resource type="Texture2D" uid="uid://cwqym6bwcbxsv" path="res://plusAssets/Texture2D/Play_Lit.png" id="5_w0fhk"]
+[ext_resource type="Texture2D" uid="uid://dg2fmfymq1ngj" path="res://plusAssets/Texture2D/AboutNotif.png" id="6_tqnor"]
+[ext_resource type="Texture2D" uid="uid://bgkwjs15o00j" path="res://plusAssets/Texture2D/CursorSprite.png" id="7_0c8yv"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.504
+anchor_right = 0.5
+anchor_bottom = 0.504
+offset_left = -320.0
+offset_top = -241.92
+offset_right = 161.0
+offset_bottom = 119.08
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.33, 1.33)
+script = ExtResource("1_kxjik")
+
+[node name="bal" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.75
+anchor_bottom = 0.75
+offset_right = -3.05176e-05
+offset_bottom = -3.05176e-05
+texture = ExtResource("2_0c8yv")
+metadata/_edit_lock_ = true
+
+[node name="AboutLit" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 222.0
+offset_top = 182.0
+offset_right = 329.0
+offset_bottom = 239.0
+texture = ExtResource("3_4nxdj")
+metadata/_edit_lock_ = true
+
+[node name="OptionsLit" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 236.0
+offset_top = 144.0
+offset_right = 376.0
+offset_bottom = 182.0
+texture = ExtResource("4_7xq40")
+metadata/_edit_lock_ = true
+
+[node name="PlayLit" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 256.0
+offset_top = 97.0
+offset_right = 381.0
+offset_bottom = 144.0
+texture = ExtResource("5_w0fhk")
+metadata/_edit_lock_ = true
+
+[node name="AboutNotif" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 329.323
+offset_top = 181.955
+offset_right = 361.323
+offset_bottom = 213.955
+texture = ExtResource("6_tqnor")
+
+[node name="version" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 408.0
+offset_top = 332.0
+offset_right = 472.0
+offset_bottom = 355.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "v0.67.67"
+
+[node name="butgodot" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 357.0
+offset_top = 72.0
+offset_right = 476.0
+offset_bottom = 95.0
+rotation = 0.0872665
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "... but in Godot!"
+
+[node name="cur" type="Sprite2D" parent="."]
+position = Vector2(-125.564, 132.331)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_0c8yv")
+
+[node name="AboutButt" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+offset_left = 233.0
+offset_top = 178.0
+offset_right = 332.0
+offset_bottom = 207.0
+rotation = 0.383972
+flat = true
+
+[node name="OptionsButt" type="Button" parent="."]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 156.0
+offset_right = 371.0
+offset_bottom = 185.0
+rotation = -0.0872665
+flat = true
+
+[node name="PlayButt" type="Button" parent="."]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 97.0
+offset_right = 379.0
+offset_bottom = 135.0
+rotation = 0.10472
+flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
